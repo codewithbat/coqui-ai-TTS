@@ -20,7 +20,9 @@ def exists(val: _T | None) -> TypeIs[_T]:
     return val is not None
 
 
-def default(val: _T | None, d: _T | Callable[[], _T]) -> _T:
+def default(val
+
+: _T | None, d: _T | Callable[[], _T]) -> _T:
     if exists(val):
         return val
     return d() if callable(d) else d
